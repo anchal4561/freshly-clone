@@ -45,11 +45,11 @@ const Signup = () => {
         e.preventDefault();
         // console.log(form)
         dispatch(signupUser(form))
-        if (isAuth) {
-            return <Navigate to="/login" />
-        }
+        
     };
-
+    if (isAuth) {
+        return <Navigate to="/login" />
+    }
     return (
         <div>
             <Navbar />
